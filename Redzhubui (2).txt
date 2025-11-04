@@ -61,7 +61,7 @@ local redzlib = {
 	Save = {
 		UISize = {550, 380},
 		TabSize = 160,
-		Theme = "Darker"
+		Theme = "ProtectionMenu"
 	},
 	Settings = {},
 	Connection = {},
@@ -2710,4 +2710,5 @@ function redzlib:MakeWindow(Configs)
 end
 
 return redzlib
+
 
