@@ -2391,23 +2391,18 @@ function redzlib:MakeWindow(Configs)
 			end
 			function Dropdown:Set(Val1, Clear)
 	if type(Val1) == "table" then
-		self.Options = self.Options or {}
-		local LastSelected = self.Selected
-
-		if typeof(AddNewOptions) == "function" then
-			AddNewOptions(Val1, not Clear)
+		local LastSelected = Selected
+		AddNewOptions(Val1, not Clear)
+		if type(LastSelected) == "string" and Options[LastSelected] then
+			Selected = LastSelected
 		end
-
-		if LastSelected and self.Options[LastSelected] ~= nil then
-			self.Selected = LastSelected
-		end
-
+		UpdateSelected()
 	elseif type(Val1) == "function" then
-		self.Callback = Val1
+		Callback = Val1
 	end
-
-	return Dropdown
 end
+
+return Dropdown
 		function Tab:AddSlider(Configs)
 			local SName = Configs[1] or Configs.Name or Configs.Title or "Slider!"
 			local SDesc = Configs.Desc or Configs.Description or ""
