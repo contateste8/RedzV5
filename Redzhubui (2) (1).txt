@@ -2001,12 +2001,14 @@ function redzlib:MakeWindow(Configs)
 			
 			local Button, LabelFunc = ButtonFrame(Container, TName, TDesc, UDim2.new(1, -38))
 			
-			local ToggleHolder = InsertTheme(Create("Frame", Button, {
-				Size = UDim2.new(0, 35, 0, 18),
-				Position = UDim2.new(1, -10, 0.5),
-				AnchorPoint = Vector2.new(1, 0.5),
-				BackgroundColor3 = Color3.fromRGB(20, 20, 20)
-			}), "Stroke")Make("Corner", ToggleHolder, UDim.new(0.5, 0))
+			local ToggleHolder = Create("Frame", Button, {
+            Size = UDim2.new(0, 35, 0, 18),
+            Position = UDim2.new(1, -10, 0.5),
+            AnchorPoint = Vector2.new(1, 0.5),
+            BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+            })
+            
+            Make("Corner", ToggleHolder, UDim.new(0.5, 0))
 			
 			local Slider = Create("Frame", ToggleHolder, {
 				BackgroundTransparency = 1,
