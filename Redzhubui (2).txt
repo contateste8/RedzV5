@@ -25,11 +25,11 @@ local redzlib = {
 	
     ProtectionMenu = {
 	["Color Hub 1"] = ColorSequence.new({
-		ColorSequenceKeypoint.new(0.00, Color3.fromRGB(40, 40, 40)),
-		ColorSequenceKeypoint.new(1.00, Color3.fromRGB(40, 40, 40))
+		ColorSequenceKeypoint.new(0.00, Color3.fromRGB(50, 50, 50)),
+		ColorSequenceKeypoint.new(1.00, Color3.fromRGB(50, 50, 50))
 	}),
 	["Color Hub 2"] = Color3.fromRGB(40, 40, 40),
-	["Color Stroke"] = Color3.fromRGB(40, 40, 40),
+	["Color Stroke"] = Color3.fromRGB(37, 37, 37),
 	["Color Theme"] = Color3.fromRGB(255, 255, 255),
 	["Color Text"] = Color3.fromRGB(255, 255, 255),
 	["Color Dark Text"] = Color3.fromRGB(190, 190, 190)
